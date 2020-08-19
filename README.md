@@ -1,29 +1,23 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
 
 ### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+Universal Logger
 
 ### How do I get set up? ###
+npm install
+nodemon app
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+Configure Postman
 
-### Contribution guidelines ###
+http://localhost:8889/multiFunctionCall
+http://localhost:8889/user 
 
-* Writing tests
-* Code review
-* Other guidelines
+Check the logs
 
-### Who do I talk to? ###
+Each logger.info has a unique request-id which distingushes the call.
 
-* Repo owner or admin
-* Other community or team contact
+The request-id in logs for multifunction calls remains the same
+The request-id in logs for subsequent axios call remains same
+
+
