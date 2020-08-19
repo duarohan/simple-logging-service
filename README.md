@@ -10,8 +10,8 @@ nodemon app
 
 Configure Postman
 
-http://localhost:8889/multiFunctionCall
-http://localhost:8889/user 
+GET http://localhost:8889/multiFunctionCall
+POST http://localhost:8889/user 
 
 Check the logs
 
