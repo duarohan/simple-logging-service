@@ -1,0 +1,52 @@
+2020-08-20T06:14:03.871Z [58b3c490-e2ac-11ea-aec9-7f3da1dc2223] info: return
+2020-08-20T06:14:03.876Z [58b3c490-e2ac-11ea-aec9-7f3da1dc2223] info: Call Fn 3
+2020-08-20T06:14:03.877Z [58b3c490-e2ac-11ea-aec9-7f3da1dc2223] info: Call Fn 2
+2020-08-20T06:14:03.877Z [58b3c490-e2ac-11ea-aec9-7f3da1dc2223] info: Call Fn 1
+2020-08-20T06:28:52.528Z [6a4fc120-e2ae-11ea-aec9-7f3da1dc2223] info: user Found
+2020-08-20T06:28:52.574Z [6a4fc120-e2ae-11ea-aec9-7f3da1dc2223] info: User Created with id
+2020-08-20T07:33:06.580Z [undefined] error: uncaughtException: debug is not defined
+ReferenceError: debug is not defined
+    at Object.<anonymous> (/Users/rohandua/Desktop/Square Panda/universal-logger/middleware/accessLogger.js:19:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/Users/rohandua/Desktop/Square Panda/universal-logger/app.js:5:22)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+2020-08-20T07:34:52.906Z [a2eee840-e2b7-11ea-979c-cb10fffc9256] info: user Found
+2020-08-20T07:34:52.933Z [a2eee840-e2b7-11ea-979c-cb10fffc9256] info: User Created with id
+2020-08-20T07:41:24.428Z [undefined] error: uncaughtException: Cannot find module './middleware/setReqId'
+Error: Cannot find module './middleware/setReqId'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/Users/rohandua/Desktop/Square Panda/universal-logger/app.js:6:18)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+2020-08-20T07:41:27.304Z [undefined] error: uncaughtException: Cannot find module './middleware/setReqId'
+Error: Cannot find module './middleware/setReqId'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/Users/rohandua/Desktop/Square Panda/universal-logger/app.js:6:21)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+2020-08-20T07:42:03.161Z [a3611590-e2b8-11ea-9e23-1d255fc64fb4] info: user Found
+2020-08-20T07:42:03.184Z [a3611590-e2b8-11ea-9e23-1d255fc64fb4] info: User Created with id
+2020-08-20T07:44:06.605Z [ecf4fdc0-e2b8-11ea-913b-7bca2c53c5a5] info: user Found
+2020-08-20T07:44:06.663Z [ecf4fdc0-e2b8-11ea-913b-7bca2c53c5a5] info: User Created with id
+2020-08-20T07:48:02.217Z [79660e20-e2b9-11ea-98cd-1d3669aeb4d8] info: user Found
+2020-08-20T07:48:02.302Z [79660e20-e2b9-11ea-98cd-1d3669aeb4d8] info: User Created with id
+2020-08-20T07:56:05.971Z [4982202f-fed0-4a14-9122-bbbfb5b30851] info: user Found
+2020-08-20T07:56:06.013Z [4982202f-fed0-4a14-9122-bbbfb5b30851] info: User Created with id

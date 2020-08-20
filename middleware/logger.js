@@ -1,4 +1,3 @@
-const debug = require('debug')('services-lib:logger');
 const fs = require('fs');
 const { createLogger, format, transports } = require('winston');
 const { combine, timestamp, label, printf } = format;
@@ -21,7 +20,6 @@ const opts = {
   }
 
 const logDirectory = './logs';
-  debug(`Log directory: ${logDirectory}`);
   if (!fs.existsSync(logDirectory)) {
     fs.mkdirSync(logDirectory);
   }
