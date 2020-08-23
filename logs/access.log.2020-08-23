@@ -1,0 +1,3 @@
+::ffff:127.0.0.1 - - [23/Aug/2020:05:15:52 +0000] "GET /user/1 HTTP/1.1" 200 24 "-" "axios/0.19.2" a59f557c-905a-420c-86b5-31ac21c0c9d2 9.134
+::1 - - [23/Aug/2020:05:15:52 +0000] "POST /user HTTP/1.1" 200 26 "-" "PostmanRuntime/7.26.3" a59f557c-905a-420c-86b5-31ac21c0c9d2 75.517
+::1 - - [23/Aug/2020:05:15:56 +0000] "GET /multiFunctionCall HTTP/1.1" 200 27 "-" "PostmanRuntime/7.26.3" 4fd4fe15-225b-4d0c-b19b-1ab5a1a2e4a9 1.547
