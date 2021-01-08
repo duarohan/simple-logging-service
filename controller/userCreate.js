@@ -1,6 +1,6 @@
 const logger = require('../middleware/logger');
-const axios = require('axios')
-const baseurl = 'http://localhost:8889'
+const axios = require('axios');
+const baseurl = 'http://localhost:8889';
 
 exports.createUser = async function createUser(req, res, next){
     const id = 1;
