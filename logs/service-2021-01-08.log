@@ -1,0 +1,6 @@
+2021-01-08T16:03:25.343Z [e94a413a-dd2c-4d46-9334-6b62eb925f8c] info: (controller/userCreate.js:39) return
+2021-01-08T16:03:25.346Z [e94a413a-dd2c-4d46-9334-6b62eb925f8c] info: (controller/userCreate.js:35) Call Fn 3
+2021-01-08T16:03:25.347Z [e94a413a-dd2c-4d46-9334-6b62eb925f8c] info: (controller/userCreate.js:31) Call Fn 2
+2021-01-08T16:03:25.347Z [e94a413a-dd2c-4d46-9334-6b62eb925f8c] info: (controller/userCreate.js:26) Call Fn 1
+2021-01-08T16:07:44.885Z [77e6377c-0719-4b16-8286-25a66ba49b68] info: (controller/userCreate.js:20) user Found
+2021-01-08T16:07:44.911Z [77e6377c-0719-4b16-8286-25a66ba49b68] info: (controller/userCreate.js:14) User Created with id
