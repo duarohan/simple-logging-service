@@ -1,14 +1,3 @@
-/**
- * Copyright (c) 2017 Square Panda Inc.
- * All Rights Reserved.
- * Dissemination, use, or reproduction of this material is strictly forbidden
- * unless prior written permission is obtained from Square Panda Inc.
- * @Last modified by:   arjun
- *
- * Log utility for generating access logs.  Generates a middelware (Express) handler that is
- * used to generate access logs.  Relies upon the Morgan framework to do so.  Access logs are apache
- * style, with a few fields added on.
- */
 const fs = require('fs');
 const morgan = require('morgan');
 const fileStreamRotator = require('file-stream-rotator');
@@ -26,8 +15,6 @@ const accessLogStream = fileStreamRotator.getStream({
   verbose: false,
 });
 
-// Configure access log using morgan.  Format is acpache access style, with a few additions.
-// Access log should include X-Request-ID header, so set up custom token for this field.
 morgan.token('request-id', (req) => {
     if(req.headers['x-request-id']){
         return req.headers['x-request-id'];
