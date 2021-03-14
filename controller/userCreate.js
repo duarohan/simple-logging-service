@@ -7,7 +7,6 @@ exports.createUser = async function createUser(req, res, next){
     response = await axios({
         method: 'get',
         url: `${baseurl}/user/${id}`,
-        headers : {'x-request-id': req.requestMetadata}
       });
 
     if(response.status == 200){
