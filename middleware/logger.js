@@ -47,7 +47,7 @@ function formatLogArguments (args) {
   return args
 }
 const opts = {
-    filename: './logs/service-%DATE%.log',
+    filename: './logs/service.log-%DATE%',
     datePattern: 'YYYY-MM-DD',
     prepend: false,
     json: false,

@@ -1,0 +1,3 @@
+::1 - - [19/Jun/2021:06:19:13 +0000] "GET /multiFunctionCall HTTP/1.1" 200 27 "-" "curl/7.64.1" 4ef53c01-f4cd-494f-a674-c88fc8c1e556 11.259
+::ffff:127.0.0.1 - - [19/Jun/2021:06:20:29 +0000] "GET /user/1 HTTP/1.1" 200 24 "-" "axios/0.19.2" be16fc34-5f90-459e-affd-e49ea5e9b3d4 2.315
+::1 - - [19/Jun/2021:06:20:29 +0000] "POST /user HTTP/1.1" 200 26 "-" "curl/7.64.1" be16fc34-5f90-459e-affd-e49ea5e9b3d4 27.980

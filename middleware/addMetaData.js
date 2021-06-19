@@ -1,4 +1,4 @@
-const uuidv4 = require('uuid/v4');
+const { v4: uuidv4 } = require('uuid');
 const httpContext = require('express-http-context');
 const express = require('express');
 const router = express.Router();
