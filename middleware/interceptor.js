@@ -3,7 +3,10 @@ const axios = require('axios');
 
 module.exports.addRequestId = () => {
     axios.interceptors.request.use(function (req) {
-        req.headers['x-request-id'] = httpContext.get('reqId');
+        const requestId = httpContext.get('reqId')
+        if(requestId){
+            req.headers['x-request-id'] = requestId
+        }
         return req;
     })
   };
