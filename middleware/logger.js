@@ -5,11 +5,22 @@ transports.DailyRotateFile = require('winston-daily-rotate-file');
 var httpContext = require('express-http-context');
 const path = require('path');
 const PROJECT_ROOT = path.join(__dirname,'..')
+const debug = require('debug')('logger');
+const { createGzip } = require('zlib');
+const { pipeline } = require('stream');
+const { createReadStream, createWriteStream } = require('fs');
+const util = require('util');
+
+const pipe = util.promisify(pipeline);
+const deleteFile = util.promisify(fs.unlink);
+const exec = util.promisify(require('child_process').exec);
 
 const myFormat = printf(({ level, message, timestamp }) => {
   var reqId = httpContext.get('reqId');
   return `${timestamp} [${reqId}] ${level}: ${message}`;
 });
+
+const retentionPeriod = '15d';
 
 function getStackInfo (stackIndex) {
   var stacklist = (new Error()).stack.split('\n').slice(3)
@@ -46,15 +57,34 @@ function formatLogArguments (args) {
   }
   return args
 }
-const opts = {
-    filename: './logs/service.log-%DATE%',
-    datePattern: 'YYYY-MM-DD',
-    prepend: false,
-    json: false,
-    timestamp: true,
-    handleExceptions: true,
-    exitOnError: false,
+const transport = new transports.DailyRotateFile({
+  filename: './logs/service.log-%DATE%',
+  datePattern: 'YYYY-MM-DD',
+  prepend: false,
+  json: false,
+  timestamp: true,
+  handleExceptions: true,
+  exitOnError: false,
+  maxFiles: retentionPeriod,
+});
+
+/**
+ * Zipping the previous day file on each rotate also ensuring the retention Period of the files
+ */
+
+ transport.on('rotate', async (oldFilename) => {
+  try {
+    const retentionPeriodNum = retentionPeriod.split('d')[0];
+    await exec(`find ${config.logging.directory} -type f -mtime +${retentionPeriodNum} -delete`);
+    const gzip = createGzip();
+    const source = createReadStream(oldFilename);
+    const destination = createWriteStream(`${oldFilename}.gz`);
+    await pipe(source, gzip, destination);
+    await deleteFile(oldFilename);
+  } catch (err) {
+    debug(`MANUAL FIX REQUIRED!!! - Error in rotating file ${oldFilename} - ${util.inspect(err)}`);
   }
+});
 
 const logDirectory = './logs';
   if (!fs.existsSync(logDirectory)) {
@@ -68,7 +98,7 @@ const logger = new createLogger({
     myFormat
   ),
   transports: [
-    new transports.DailyRotateFile(opts),
+    transport
   ],
 });
 
