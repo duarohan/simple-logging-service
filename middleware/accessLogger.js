@@ -23,7 +23,7 @@ morgan.token('request-id', (req) => {
     }
 });
 
-const accessLogger = morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] '
-               + '":referrer" ":user-agent" :request-id :response-time', { stream: accessLogStream });
+const accessLogger = morgan(':date[iso] [:request-id] :remote-addr - :remote-user ":method :url HTTP/:http-version" :status :res[content-length] '
+               + '":referrer" ":user-agent" :response-time', { stream: accessLogStream });
 
 module.exports = accessLogger;
